@@ -9,9 +9,9 @@ const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb://Admin:' + 
     process.env.MONGO_ATLAS_PW + 
-    '@node-rest-shop-shard-00-00-dcwi5.mongodb.net:27017,node-rest-shop-shard-00-01-dcwi5.mongodb.net:27017,node-rest-shop-shard-00-02-dcwi5.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin', 
-
+    '@node-rest-shop-shard-00-00-dcwi5.mongodb.net:27017,node-rest-shop-shard-00-01-dcwi5.mongodb.net:27017,node-rest-shop-shard-00-02-dcwi5.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin'
 );
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));

@@ -14,6 +14,10 @@ mongoose.connect('mongodb://Admin:' +
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
+
+//  Make "uploads"-folder publicly available.
+app.use('/uploads', express.static('uploads'));
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 

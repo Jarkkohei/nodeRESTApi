@@ -1,4 +1,8 @@
 nodemon.json
+uploads/
+
+[alias]
+apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
 
 # Created by https://www.gitignore.io/api/node,windows,visualstudiocode
 
